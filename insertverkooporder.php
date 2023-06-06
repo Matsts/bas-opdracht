@@ -1,11 +1,12 @@
 <?php
 
-include "database.php";
-include "Verkooporders.php";
+include "databasezelf.php";
+include "VerkoopForm.php";
+include 'verkoop.php';
 $conn = dbConnect();
 
 $db = new Database();
-$form = new VerkooporderForm($db);
+$form = new VerkoopForm($db);
 $form->generateForm();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {

@@ -25,7 +25,7 @@ class Database {
     }
     function dbConnect(){
         $servername = "localhost" ;
-        $dbname = "bjas" ;
+        $dbname = "bas" ;
         $username = "root" ;
         $password = "" ;
       
