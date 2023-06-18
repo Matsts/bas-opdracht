@@ -77,6 +77,13 @@ class Klant{
    	 	}
  	}
 
+	 public function updateKlant($id, $klantid, $artId, $verkOrdDatum, $verkOrdStatus, $conn){
+
+		$sql = "UPDATE Klant SET Klantid = '$klantid', artId = '$artId', verkOrdDatum = '$verkOrdDatum', verkOrdStatus = '$verkOrdStatus' WHERE verkOrdId  = '$id'";
+	   $stmt = $conn->prepare($sql);
+	   $stmt->execute();
+	}
+
 }
 
 

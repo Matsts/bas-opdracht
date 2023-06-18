@@ -2,7 +2,7 @@
 
 class Verkoop{
 
-	public function insertVerkooporder($conn, $klantId, $artId, $aantal){
+	public function insertVerkoop($conn, $klantId, $artId, $aantal){
 
 		$datum = date("Y-m-d");
         $sql = "INSERT INTO verkooporders (klantId, artId, verkOrdDatum, verkOrdBestAantal, verkOrdStatus) VALUES ('$klantId', '$artId', '$datum', '$aantal', 1 )";
@@ -11,7 +11,7 @@ class Verkoop{
 
         return true;
 	}
-	public function selectVerkooporder($conn){
+	public function selectVerkoop($conn){
 
 		$sql = "SELECT * FROM `verkooporders`";
 		$stmt = $conn->query($sql);
